@@ -16,15 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
 Route::get('/hello', function () {
     return view('hello');
 });
-
 Route::get('/form', function () {
     return view('form');
 });
-
 Route::get('/action', function () {
     return view('action');
 });
+
+Route::get('/folders/{id}/tasks', 'TaskController@index')->name('tasks.index');
